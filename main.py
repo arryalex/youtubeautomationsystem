@@ -127,7 +127,7 @@ def run_functions():
     if 1 <= current_hour < 19:
         video_Id = Upload_Video()
         time.sleep(5 * 60)
-        update_view_count_and_thumbnail(video_Id)
+        update_view_count_and_thumbnail()
 
 def print_current_time():
     current_time = time.strftime('%Y-%m-%d %H:%M:%S')
