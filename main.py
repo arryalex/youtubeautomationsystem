@@ -15,7 +15,6 @@ combinations = {
           
 }
 
-time.sleep(10)
 print("Your Program is running ;) ...")
 
 current_index = 0
