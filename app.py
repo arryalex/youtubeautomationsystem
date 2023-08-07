@@ -1,9 +1,19 @@
 from flask import Flask
-app = Flask(__name__)
+from threading import Thread
+import random
+
+app = Flask('')
+
 
 @app.route('/')
-def hello_world():
-    return 'Hello, World!'
+def home():
+	return 'THE MINI TRUCK'
 
-if __name__ == "__main__":
-    app.run()
+
+def run():
+	app.run(host='0.0.0.0', port=random.randint(2000, 9000))
+
+
+def keep_alive():
+	t = Thread(target=run)
+	t.start()
