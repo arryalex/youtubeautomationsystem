@@ -5,7 +5,7 @@ import time
 from datetime import datetime
 from Upload import upload
 from Update import update_view_count_and_thumbnail
-
+from keep_alive import keep_alive
 
 combinations = {
     "a": ["koushalmonga", "RajGrover005", "ChetanMongaVlogs",],
@@ -15,6 +15,7 @@ combinations = {
           
 }
 
+keep_alive()
 print("Your Program is running ;) ...")
 
 current_index = 0
