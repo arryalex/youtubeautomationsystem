@@ -136,15 +136,13 @@ def main():
     moving_in_progress = False
     initial_setup()
     move_keys_between_files_on_first_run()
-    schedule.every(4).day.at("19:00").do(initial_setup)
+    schedule.every(4).days.at("19:00").do(initial_setup)
     schedule.every(1).day.at("19:00").do(move_keys_between_files)
     schedule.every().hour.at(":30").do(run_functions)
     current_hour = datetime.now().hour
     while True:
         schedule.run_pending()
         time.sleep(1)
-        if not moving_in_progress and datetime.now().minute % 4 == 0:
-            schedule.cancel_job(move_keys_between_files)
 
 if __name__ == "__main__":
     main()
