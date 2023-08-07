@@ -1,0 +1,13 @@
+telebot
+telepot
+pytube
+schedule
+google-api-python-client==2.24.0
+google-auth==2.3.3
+Pillow==8.3.2
+requests==2.26.0
+google-auth-oauthlib 
+google-auth-httplib2
+Flask==2.2.2
+gunicorn==20.1.0
+aiohttp==3.8.1
