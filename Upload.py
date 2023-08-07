@@ -155,7 +155,7 @@ def update_json_file(file_path, data):
 def upload(file_name) :
     pickle_files = ["token.pickle", "token_.pickle", "token__.pickle"]
     try:
-        file_path = f"Youtube Videos Meta Data\\{file_name}.json'"
+        file_path = f"Youtube Videos Meta Data/{file_name}.json"
         data = load_json_file(file_path)
     except FileNotFoundError:
         print("The 'video_data.json' file does not exist or cannot be found.")
